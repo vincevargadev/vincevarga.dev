@@ -1,7 +1,8 @@
-module github.com/sergeyklay/gohugo-theme-ed/exampleSite
+module github.com/vincevargadev/vincevarga.dev
 
-go 1.18
+go 1.24
 
-replace github.com/sergeyklay/gohugo-theme-ed => ../
+// To develop locally, uncomment the following line and run `hugo mod get`
+replace github.com/vincevargadev/gohugo-theme-vedi => ../gohugo-theme-vedi
 
-require github.com/sergeyklay/gohugo-theme-ed v0.8.0 // indirect
+require github.com/vincevargadev/gohugo-theme-vedi v0.0.0-20250706164100-0040b49c69d5

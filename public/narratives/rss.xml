@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Narratives on Ed.</title>
+    <link>//localhost:1313/narratives/</link>
+    <description>Recent content in Narratives on Ed.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>contact@serghei.pl (Serghei Iakovlev)</managingEditor>
+    <webMaster>contact@serghei.pl (Serghei Iakovlev)</webMaster>
+    <copyright>© 2019-2024 Serghei Iakovlev</copyright>
+    <lastBuildDate>Mon, 18 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/narratives/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Narrative of the Life of Frederick Douglass</title>
+      <link>//localhost:1313/narratives/narrative/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate><author>contact@serghei.pl (Serghei Iakovlev)</author>
+      <guid>//localhost:1313/narratives/narrative/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;editors-note&#34;&gt;Editor&amp;rsquo;s note&lt;/h2&gt;&#xA;&lt;p&gt;This version of &lt;em&gt;Narrative of the Life of Frederick Douglass&lt;/em&gt; was adapted from &lt;em&gt;The Project Gutenberg EBook of The Narrative of the Life of Frederick Douglass, by Frederick Douglass&lt;/em&gt;. The &lt;a href=&#34;http://www.gutenberg.org/&#34;&gt;Guttenberg file&lt;/a&gt; does not tell us which witness was used in making their digital edition. The edition below is only a slightly modified version of the Guttenberg text, and therefore should not be taken too seriously as an edition. I use the text mostly to show a few affordances of using Ed for long form narrative. This page, for example, showcases a different sidebar than the rest of our sample site, with a table of content of the novel generated out of metadata in the source file. In addition, reading morsels of the novel on your different devices can give you a sense of the experience of reading prose using Ed, and shows you an example of the optional sidebar with a table of contents. A few other features of this page are described in more detail in the &lt;a href=&#34;//localhost:1313/documentation/&#34;&gt;Documentation&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
