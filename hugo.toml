@@ -1,8 +1,7 @@
-# You may need to change this line for your real project.
-baseURL = 'Ed.'
+baseURL = 'https://vincevarga.dev'
 
 # A "copyright"-line to be added to RSS/Atom files and the footer.
-copyright = '© 2019-2024 Serghei Iakovlev'
+copyright = '© 2025 Vince Varga'
 
 # Keep title short to prevent overflow.
 # There’s no official guidance on this, but 40 characters for
@@ -10,7 +9,7 @@ copyright = '© 2019-2024 Serghei Iakovlev'
 #
 # NB: Final title of shareable pages will be this plus the
 #     title of the page. E.g. "Posts | Ed."
-title = "Ed."
+title = "Vince Varga"
 
 enableRobotsTXT = true
 
@@ -19,6 +18,9 @@ enableRobotsTXT = true
 refLinksErrorLevel = 'WARNING'
 
 [params]
+  # Environment setting for production features (robots.txt, etc.)
+  env = 'production'
+  
   # Site description. Used in meta description
   description = 'Ed is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
 
@@ -34,7 +36,7 @@ refLinksErrorLevel = 'WARNING'
   footer = 'Built with <a href="https://github.com/sergeyklay/gohugo-theme-ed" target="_blank" rel="noopener noreferrer">Ed</a>. Distributed under an MIT license.'
 
   # Colour scheme. Options: red, orange, magenta, cyan, blue, brown
-  colorScheme = ''
+  colorScheme = 'red'
 
   # Sections to be displayed in:
   # - main page
@@ -135,15 +137,6 @@ refLinksErrorLevel = 'WARNING'
       emitMetadata = 0
       inputPosition = 'bottom'
       lang = 'en'
-
-  [params.privacy]
-    [params.privacy.googleTagManager]
-      disable = false
-      respectDoNotTrack = true
-
-  [params.services]
-    [params.services.googleTagManager]
-      id = 'GTM-W8D5W642'
 
 [languages]
   [languages.en]

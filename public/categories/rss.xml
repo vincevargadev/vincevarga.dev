@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Ed.</title>
-    <link>//localhost:1313/categories/</link>
-    <description>Recent content in Categories on Ed.</description>
+    <title>Categories on Vince Varga</title>
+    <link>https://vincevarga.dev/categories/</link>
+    <description>Recent content in Categories on Vince Varga</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>contact@serghei.pl (Serghei Iakovlev)</managingEditor>
     <webMaster>contact@serghei.pl (Serghei Iakovlev)</webMaster>
-    <copyright>© 2019-2024 Serghei Iakovlev</copyright>
-    <atom:link href="//localhost:1313/categories/rss.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Vince Varga</copyright>
+    <atom:link href="https://vincevarga.dev/categories/rss.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="//localhost:1313/">
-    <title>Poems - Ed.</title>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="https://vincevarga.dev/">
+    <title>Poems - Vince Varga</title>
     <subtitle type="html"><![CDATA[Ed is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.]]></subtitle>
     <link href="/poems/" rel="alternate" type="text/html" title="html" />
     <link href="/poems/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
     <link href="/poems/atom.xml" rel="self" type="text/xml" title="atom" />
     <link href="/poems/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
-    <icon>//localhost:1313/img/open-graph-logo_hu_1978870e36bf97f6.png</icon>
-    <logo>//localhost:1313/img/open-graph-logo_hu_1978870e36bf97f6.png</logo>
+    <icon>https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png</icon>
+    <logo>https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png</logo>
     <author>
         <name>Serghei Iakovlev</name>
         <email>contact@serghei.pl</email>
     </author>
     <generator uri="https://gohugo.io" version="0.147.9">Hugo</generator>
     <updated>2022-05-01T14:56:58+02:00</updated>
-    <id>urn:uuid:f5423b9f-eadf-5baa-e92a-eaa3683f5fb9</id>
+    <id>urn:uuid:484fe0cb-0a3c-5a93-095c-fb110fa58f93</id>
     <entry>
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/poems/mypoem/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="https://vincevarga.dev/poems/mypoem/?utm_source=atom_feed" />
         <title type="html"><![CDATA[My poem]]></title>
         
         
         
         <published>2022-02-02T14:56:58+02:00</published>
         <updated>2022-02-02T14:56:58+02:00</updated>
-        <id>urn:uuid:49f0bb14-e84b-5300-f914-22193b955335</id>
+        <id>urn:uuid:15c91492-0724-5232-c921-f936d7958434</id>
         
                 <author>
                     <name>Alex Gil</name>
@@ -42,14 +42,14 @@
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/poems/dreams/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="https://vincevarga.dev/poems/dreams/?utm_source=atom_feed" />
         <title type="html"><![CDATA[Dreams]]></title>
         
         
         
         <published>2022-02-01T14:56:58+02:00</published>
         <updated>2022-05-01T14:56:58+02:00</updated>
-        <id>urn:uuid:01ae734c-04f8-50a7-19c6-e8d908f786ce</id>
+        <id>urn:uuid:0078a616-e288-53cb-1996-a5c2590eeb5a</id>
         
                 <author>
                     <name>Langston Hughes</name>
@@ -70,14 +70,14 @@
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/poems/delayed/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="https://vincevarga.dev/poems/delayed/?utm_source=atom_feed" />
         <title type="html"><![CDATA[Delayed till she had ceased to know]]></title>
         
         
         
         <published>2022-01-30T14:56:58+02:00</published>
         <updated>2022-01-30T14:56:58+02:00</updated>
-        <id>urn:uuid:1dd22907-9b83-5ac7-4941-3022b302cec1</id>
+        <id>urn:uuid:7a5980b0-3ccc-5d6b-8931-b3028f8f3827</id>
         
                 <author>
                     <name>Emily Dickinson</name>
@@ -118,14 +118,14 @@ Doubtful if it be crowned!</li>
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/poems/a-julia/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="https://vincevarga.dev/poems/a-julia/?utm_source=atom_feed" />
         <title type="html"><![CDATA[A Julia de Burgos]]></title>
         
         
         
         <published>2022-01-01T14:57:10+02:00</published>
         <updated>2022-01-01T14:57:10+02:00</updated>
-        <id>urn:uuid:3fb91af6-735f-5672-c9ab-d90ff81e8221</id>
+        <id>urn:uuid:2156d72f-9735-5870-09eb-df30163de483</id>
         
                 <author>
                     <name>Julia de Burgos</name>
@@ -207,14 +207,14 @@ Doubtful if it be crowned!</li>
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/poems/o-captain/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="https://vincevarga.dev/poems/o-captain/?utm_source=atom_feed" />
         <title type="html"><![CDATA[O Captain! My Captain!]]></title>
         
         
         
         <published>2021-02-02T23:56:58+02:00</published>
         <updated>2021-02-02T23:56:58+02:00</updated>
-        <id>urn:uuid:f3cf87b9-f384-55cb-c9f4-2e9903e2bd60</id>
+        <id>urn:uuid:3b7ab8a6-e9b7-5944-3938-e430ca5af0c2</id>
         
                 <author>
                     <name>Walt Whitman</name>

@@ -1,0 +1,7 @@
+# Refer to the Caddy docs for more information:
+# https://caddyserver.com/docs/caddyfile
+
+vincevarga.dev, www.vincevarga.dev {
+    root * /var/www/vincevarga.dev
+    file_server
+}
