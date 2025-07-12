@@ -5,13 +5,13 @@
   "title": "Vince Varga",
   "home_page_url": "https://vincevarga.dev/?utm_source=json_feed",
   "feed_url": "https://vincevarga.dev/index.json",
-  "description": "Ed is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.",
+  "description": "Vedi is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.",
   "icon": "https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png",
   "favicon": "https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png",
   "authors": [
     {
-      "name": "Serghei Iakovlev",
-      "url": "https://twitter.com/egreps"
+      "name": "Vince Varga",
+      "url": "https://twitter.com/vincevargadev"
     }
   ],
   "language" : "en",

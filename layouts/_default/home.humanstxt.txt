@@ -8,25 +8,42 @@ I'm Vince, I'm a software developer.
 
 Shipping Flutter apps by day, hacking on fullstack Rust and chasing crypto rabbit holes by night.
 
-
+{{ with site.Params.author }}
 /* TEAM */
-Author: Vince Varga
-Contact: vince@vincevarga.dev
-From: Munich, Germany
-
-GitHub: @vincevargadev
-X/Twitter: @vincevargadev
-LinkedIn: @vincevargadev
-
-https://github.com/vincevargadev
-https://x.com/vincevargadev
-https://www.linkedin.com/in/vincevargadev
+Author: {{ .name | default (print .) }}
+{{- with .email }}
+Contact: {{ . }}
+{{- end }}
+{{- with .location }}
+From: {{ . }}
+{{- end }}
+{{ "" }}
+{{- with .github }}
+GitHub: @{{ . }}
+{{- end }}
+{{- with .twitter }}
+X/Twitter: @{{ . }}
+{{- end }}
+{{- with .linkedin }}
+LinkedIn: @{{ . }}
+{{- end }}
+{{ "" }}
+{{- with .github }}
+https://github.com/{{ . }}
+{{- end }}
+{{- with .twitter }}
+https://x.com/{{ . }}
+{{- end }}
+{{- with .linkedin }}
+https://www.linkedin.com/in/{{ . }}
+{{- end }}
+{{- end }}
 
 
 /* SITE */
-Last update: 2025/07/12
-Language: English
-Hugo version: 0.147.9
+Last update: {{ now.Format "2006/01/02" }}
+Language: {{ range $i, $l := site.Languages }}{{ if $i }}, {{ end }}{{ .LanguageName }}{{ end }}
+Hugo version: {{ site.Hugo.Version }}
 
 
 /* THANKS */

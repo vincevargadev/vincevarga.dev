@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="https://vincevarga.dev/">
     <title>Dramas - Vince Varga</title>
-    <subtitle type="html"><![CDATA[Ed is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.]]></subtitle>
+    <subtitle type="html"><![CDATA[Vedi is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.]]></subtitle>
     <link href="/dramas/" rel="alternate" type="text/html" title="html" />
     <link href="/dramas/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
     <link href="/dramas/atom.xml" rel="self" type="text/xml" title="atom" />
@@ -9,8 +9,8 @@
     <icon>https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png</icon>
     <logo>https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png</logo>
     <author>
-        <name>Serghei Iakovlev</name>
-        <email>contact@serghei.pl</email>
+        <name>Vince Varga</name>
+        <email>vince@vincevarga.dev</email>
     </author>
     <generator uri="https://gohugo.io" version="0.147.9">Hugo</generator>
     <updated>2022-05-01T14:56:58+02:00</updated>
