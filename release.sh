@@ -3,7 +3,7 @@
 # Release script for vincevarga.dev
 
 # Stop execution on any failure
-set -e
+set -eo pipefail
 
 # SSH configuration
 SSH_KEY="~/.ssh/id_ed25519_scaleway"

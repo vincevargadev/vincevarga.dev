@@ -591,6 +591,22 @@ giscus supports multiple languages, and you can set the desired language for you
     lang = 'fr'
 ```
 
+### Code snippet example
+
+```rust
+pub fn are_anagrams(a: &str, b: &str) -> bool {
+    fn char_counts(s: &str) -> HashMap<char, usize> {
+        let mut counts = HashMap::new();
+        for c in s.chars().filter(|c| c.is_alphanumeric()).map(|c| c.to_ascii_lowercase()) {
+            *counts.entry(c).or_insert(0) += 1;
+        }
+        counts
+    }
+
+    char_counts(a) == char_counts(b)
+}
+```
+
 ---
 
 This enhancement to the Ed theme allows you to leverage the power of community discussions directly on your site, making it more dynamic and engaging for visitors.

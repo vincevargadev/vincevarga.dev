@@ -3,7 +3,6 @@ title: A Julia de Burgos
 date: 2022-01-01T14:57:10+02:00
 draft: false
 author: Julia de Burgos
-editor: Alex Gil
 source: Ciudad Seva
 lang: es
 ---

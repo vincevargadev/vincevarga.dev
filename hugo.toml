@@ -22,18 +22,19 @@ refLinksErrorLevel = 'WARNING'
   env = 'production'
   
   # Site description. Used in meta description
-  description = 'Vedi is a Hugo theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
+  description = "Hi, I'm Vince Varga. Build Flutter mobile apps by day. Tinker with Rust and crypto by night. All day."
 
+  sidebarImage = "/profile.jpeg"
+  sidebarIntro = "Hi, I'm Vince Varga."
+  sidebarTagline = "Build Flutter mobile apps by day. Tinker with Rust and crypto by night. All day."
+  tagline = "Software Engineer"
   # SEO keywords. Used in 'meta name="keywords"' tag.
   # May be overridden by .Keywords or .Tags in front matter.
   keywords = ['hugo', 'ed', 'hugo theme', 'minimal', 'responsive', 'clean']
 
-  # Used in site header
-  tagline = 'a Hugo theme for minimal editions'
-
   # Custom footer text on left sidebar. Use HTMl if needed.
   # "&copy;" and "{year}" will be replaced by © and the current year.
-  footer = 'Built with <a href="https://github.com/vincevargadev/gohugo-theme-vedi" target="_blank" rel="noopener noreferrer">Ed</a>. Distributed under an MIT license.'
+  footer = 'Built with <a href="https://github.com/vincevargadev/gohugo-theme-vedi" target="_blank" rel="noopener noreferrer">vedi</a>. Distributed under an MIT license.'
 
   # Colour scheme. Options: red, orange, magenta, cyan, blue, brown
   colorScheme = 'red'
@@ -125,11 +126,11 @@ refLinksErrorLevel = 'WARNING'
 
 # For more see https://gohugo.io/content-management/menus/
 [menus]
-  [[menus.main]]        # sections in the website sidebar
-    identifier = 'home' # menu item id
-    name = 'Home'       # menu item display title
-    pageRef = '/'       # path to the page
-    weight = 1          # order of the menu item
+  [[menus.main]]
+    identifier = 'home'
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
   [[menus.main]]
     identifier = 'about'
     name = 'About'
@@ -158,7 +159,7 @@ refLinksErrorLevel = 'WARNING'
   [[menus.main]]
     identifier = 'github'
     name = 'GitHub Project'
-    url = 'https://github.com/sergeyklay/gohugo-theme-ed/'
+    url = 'https://github.com/vincevargadev/gohugo-theme-vedi/'
     weight = 20
     params = {external = true}
 
