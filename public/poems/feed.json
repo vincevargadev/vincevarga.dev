@@ -3,11 +3,11 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "Poems - Vince Varga",
-  "home_page_url": "https://vincevarga.dev/?utm_source=json_feed",
+  "home_page_url": "http://localhost:1313/?utm_source=json_feed",
   
   "description": "Hi, I'm Vince Varga. Build Flutter mobile apps by day. Tinker with Rust and crypto by night. All day.",
-  "icon": "https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png",
-  "favicon": "https://vincevarga.dev/img/open-graph-logo_hu_1978870e36bf97f6.png",
+  "icon": "http://localhost:1313/img/open-graph-logo_hu_1978870e36bf97f6.png",
+  "favicon": "http://localhost:1313/img/open-graph-logo_hu_1978870e36bf97f6.png",
   "authors": [
     {
       "name": "Vince Varga",
@@ -17,37 +17,37 @@
   "language" : "en",
   "items": [
     {
-      "id": "15c91492-0724-5232-c921-f936d7958434",
-      "url": "https://vincevarga.dev/poems/mypoem/?utm_source=json_feed",
+      "id": "b1ed01bf-8099-573d-5958-c4a5c6e36699",
+      "url": "http://localhost:1313/poems/mypoem/?utm_source=json_feed",
       "title": "My poem",
       "summary": " The library is pretty And so are books Deep ",
       "date_published": "2022-02-02T14:56:58+02:00"
     },
     {
-      "id": "0078a616-e288-53cb-1996-a5c2590eeb5a",
-      "url": "https://vincevarga.dev/poems/dreams/?utm_source=json_feed",
+      "id": "ddf925e6-415f-5781-09eb-78335eab3d9b",
+      "url": "http://localhost:1313/poems/dreams/?utm_source=json_feed",
       "title": "Dreams",
       "summary": " Hold fast to dreams For if dreams die Life is a broken-winged bird That cannot fly. Hold fast to dreams For when dreams go Life is a barren field Frozen with snow. ",
       "date_published": "2022-02-01T14:56:58+02:00",
       "date_modified" : "2022-05-01T14:56:58+02:00"
     },
     {
-      "id": "7a5980b0-3ccc-5d6b-8931-b3028f8f3827",
-      "url": "https://vincevarga.dev/poems/delayed/?utm_source=json_feed",
+      "id": "dc4b27d0-c755-52c5-599e-a78f78365447",
+      "url": "http://localhost:1313/poems/delayed/?utm_source=json_feed",
       "title": "Delayed till she had ceased to know",
       "summary": " DELAYED till she had ceased to know, Delayed till in its vest of snow Her loving bosom lay. An hour behind the fleeting breath, Later by just an hour than death,— Oh, lagging yesterday! Could she have guessed that it would be; Could but a crier of the glee Have climbed the distant hill; Had not the bliss so slow a pace,— Who knows but this surrendered face Were undefeated still? Oh, if there may departing be Any forgot by victory In her imperial round, Show them this meek apparelled thing, That could not stop to be a king, Doubtful if it be crowned! ",
       "date_published": "2022-01-30T14:56:58+02:00"
     },
     {
-      "id": "2156d72f-9735-5870-09eb-df30163de483",
-      "url": "https://vincevarga.dev/poems/a-julia/?utm_source=json_feed",
+      "id": "fdb8a85f-ee68-5bfc-a95c-224361b3f4c4",
+      "url": "http://localhost:1313/poems/a-julia/?utm_source=json_feed",
       "title": "A Julia de Burgos",
       "summary": " Ya las gentes murmuran que yo soy tu enemiga porque dicen que en verso doy al mundo mi yo. Mienten, Julia de Burgos. Mienten, Julia de Burgos. La que se alza en mis versos no es tu voz: es mi voz porque tú eres ropaje y la esencia soy yo; y el más profundo abismo se tiende entre las dos. Tú eres fria muñeca de mentira social, y yo, viril destello de la humana verdad. Tú, miel de cortesana hipocresías; yo no; que en todos mis poemas desnudo el corazón. Tú eres como tu mundo, egoísta; yo no; que en todo me lo juego a ser lo que soy yo. Tú eres sólo la grave señora señorona; yo no, yo soy la vida, la fuerza, la mujer. Tú eres de tu marido, de tu amo; yo no; yo de nadie, o de todos, porque a todos, a todos en mi limpio sentir y en mi pensar me doy. Tú te rizas el pelo y te pintas; yo no; a mí me riza el viento, a mí me pinta el sol. Tú eres dama casera, resignada, sumisa, atada a los prejuicios de los hombres; yo no; que yo soy Rocinante corriendo desbocado olfateando horizontes de justicia de Dios. Tú en ti misma no mandas; a ti todos te mandan; en ti mandan tu esposo, tus padres, tus parientes, el cura, el modista, el teatro, el casino, el auto, las alhajas, el banquete, el champán, el cielo y el infierno, y el que dirán social. En mí no, que en mí manda mi solo corazón, mi solo pensamiento; quien manda en mí soy yo. Tú, flor de aristocracia; y yo, la flor del pueblo. Tú en ti lo tienes todo y a todos se lo debes, mientras que yo, mi nada a nadie se la debo. Tú, clavada al estático dividendo ancestral, y yo, un uno en la cifra del divisor social somos el duelo a muerte que se acerca fatal. Cuando las multitudes corran alborotadas dejando atrás cenizas de injusticias quemadas, y cuando con la tea de las siete virtudes, tras los siete pecados, corran las multitudes, contra ti, y contra todo lo injusto y lo inhumano, yo iré en medio de ellas con la tea en la mano. ",
       "date_published": "2022-01-01T14:57:10+02:00"
     },
     {
-      "id": "3b7ab8a6-e9b7-5944-3938-e430ca5af0c2",
-      "url": "https://vincevarga.dev/poems/o-captain/?utm_source=json_feed",
+      "id": "534e965d-457d-5392-29b7-8b370e872e6b",
+      "url": "http://localhost:1313/poems/o-captain/?utm_source=json_feed",
       "title": "O Captain! My Captain!",
       "summary": " O Captain! my Captain! our fearful trip is done;1 The ship has weather’d every rack, the prize we sought is won, The port is near, the bells I hear, the people all exulting, While follow eyes the steady keel, the vessel grim and daring; But O heart! heart! heart! O the bleeding drops of red, Where on the deck my Captain lies, Fallen cold and dead. O Captain! my Captain! rise up and hear the bells; Rise up—for you the flag is flung—for you the bugle2 trills, For you bouquets and ribbon’d wreaths—for you the shores a-crowding, For you they call, the swaying mass, their eager faces turning; Here Captain! dear father! This arm beneath your head! It is some dream that on the deck, You’ve fallen cold and dead. My Captain does not answer, his lips are pale and still,3 My father does not feel my arm, he has no pulse nor will, The ship is anchor’d safe and sound, its voyage closed and done, From fearful trip the victor ship comes in with object won; Exult O shores, and ring O bells! But I with mournful tread, Walk the deck my Captain lies, Fallen cold and dead. Footnotes The author had just landed in La Guardia Airport after the flight captain died. All the passengers stood up to applaud the co-pilot. We have it in good authority that the event in question led Yoko Ono to write her \u0026ldquo;Letter to John\u0026rdquo;:",
       "date_published": "2021-02-02T23:56:58+02:00"

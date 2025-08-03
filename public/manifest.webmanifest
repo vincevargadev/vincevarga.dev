@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest",
-  "id": "96ae4b4b-c687-55d4-89de-b70970376883",
+  "id": "9a1c77bb-43ff-58da-c909-160252f79a83",
   "name": "Vince Varga",
   "short_name": "Software Engineer",
   "description": "Hi, I'm Vince Varga. Build Flutter mobile apps by day. Tinker with Rust and crypto by night. All day.",
@@ -21,6 +21,11 @@
       "name": "About",
       "short_name" : "about",
       "url": "/about/"
+    } ,
+    {
+      "name": "Flutter",
+      "short_name" : "flutter",
+      "url": "/flutter/"
     } ,
     {
       "name": "Credits",
@@ -45,7 +50,7 @@
     {
       "name": "GitHub Project",
       "short_name" : "github",
-      "url": "https://github.com/sergeyklay/gohugo-theme-ed/"
+      "url": "https://github.com/vincevargadev/gohugo-theme-vedi/"
     }
   ],
   "icons": [

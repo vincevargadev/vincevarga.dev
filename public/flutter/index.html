@@ -10,14 +10,14 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <link rel="canonical" href="http://localhost:1313/documentation/">
+    <link rel="canonical" href="http://localhost:1313/flutter/">
 
-    <title>Documentation - Vince Varga</title>
-    <meta name="description" content=" Contents Prerequisites Installing Ed Getting started Hugo Markdown and CommonMark Genres Configuring Author Selection Author Display in Ed Footnotes Blockquote …">
+    <title>Flutter - Vince Varga</title>
+    <meta name="description" content="Flutter Prerequisites This documentation was built with beginners in mind, but has the necessary information for more seasoned producers. To install and use Ed …">
     <meta name="keywords" content="hugo, ed, hugo theme, minimal, responsive, clean">
 
     
-        <meta name="author" content="Alex Gil">
+        <meta name="author" content="Vince Varga">
 
     <meta name="generator" content="Hugo 0.147.9">
 
@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap">
-    <link rel="author" type="text/plain" href="/humans.txt" title="Humans"><link rel="alternate" hreflang="en" href="http://localhost:1313/documentation/">
+    <link rel="author" type="text/plain" href="/humans.txt" title="Humans"><link rel="alternate" hreflang="en" href="http://localhost:1313/flutter/">
 
     <meta name="theme-color" content="#030303" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -38,19 +38,19 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style>
 </style>
     
-    <meta property="og:title" content="Documentation - Vince Varga">
-    <meta property="og:description" content=" Contents Prerequisites Installing Ed Getting started Hugo Markdown and CommonMark Genres Configuring Author Selection Author Display in Ed Footnotes Blockquote …">
+    <meta property="og:title" content="Flutter - Vince Varga">
+    <meta property="og:description" content="Flutter Prerequisites This documentation was built with beginners in mind, but has the necessary information for more seasoned producers. To install and use Ed …">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="http://localhost:1313/documentation/">
-    <meta property="og:image" content="http://localhost:1313/documentation/screenshot-home.png">
-    <meta property="og:image:width" content="1992">
-    <meta property="og:image:height" content="1230">
+    <meta property="og:url" content="http://localhost:1313/flutter/">
+    <meta property="og:image" content="http://localhost:1313/img/open-graph-logo.png">
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
     
-    <meta name="twitter:title" content="Documentation - Vince Varga">
-    <meta name="twitter:description" content=" Contents Prerequisites Installing Ed Getting started Hugo Markdown and CommonMark Genres Configuring Author Selection Author Display in Ed Footnotes Blockquote …">
+    <meta name="twitter:title" content="Flutter - Vince Varga">
+    <meta name="twitter:description" content="Flutter Prerequisites This documentation was built with beginners in mind, but has the necessary information for more seasoned producers. To install and use Ed …">
     <meta name="twitter:site" content="@vincevargadev">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://localhost:1313/documentation/screenshot-home.png">
+    <meta name="twitter:image" content="http://localhost:1313/img/open-graph-logo.png">
     
 
 <script type="application/ld+json" id="schema-data">
@@ -59,23 +59,17 @@
         "@type": "Article",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http://localhost:1313/documentation/"
+            "@id": "http://localhost:1313/flutter/"
         },
-        "url": "http://localhost:1313/documentation/",
-        "headline": "Documentation - Vince Varga",
-        "description": " Contents Prerequisites Installing Ed Getting started Hugo Markdown and CommonMark Genres Configuring Author Selection Author Display in Ed Footnotes Blockquote …",
-        "image": {
-            "@type": "ImageObject",
-            "url": "http://localhost:1313/documentation/screenshot-home.png",
-            "width": "1992",
-            "height": "1230"
-        },
+        "url": "http://localhost:1313/flutter/",
+        "headline": "Flutter - Vince Varga",
+        "description": "Flutter Prerequisites This documentation was built with beginners in mind, but has the necessary information for more seasoned producers. To install and use Ed …",
         "keywords": ["hugo","ed","hugo theme","minimal","responsive","clean"],
         "datePublished": "0001-01-01T00:00:00Z",
         "dateModified": "0001-01-01T00:00:00Z",
             "author": {
                 "@type": "Person",
-                "name": "Alex Gil"
+                "name": "Vince Varga"
             },
         "publisher": {
             "@type": "Organization",
@@ -120,13 +114,13 @@
             <a class="sidebar-nav-item"
                 href="/about/"
                 id="menu-main-about">About</a>
-            <a class="sidebar-nav-item"
+            <a class="sidebar-nav-item active"
                 href="/flutter/"
                 id="menu-main-flutter">Flutter</a>
             <a class="sidebar-nav-item"
                 href="/credits/"
                 id="menu-main-credits">Credits</a>
-            <a class="sidebar-nav-item active"
+            <a class="sidebar-nav-item"
                 href="/documentation/"
                 id="menu-main-documentation">Documentation</a>
             <a class="sidebar-nav-item"
@@ -176,7 +170,7 @@
                 <article class="page" role="document">
     <header>
         <h1 class="text-title">
-            Documentation
+            Flutter
         </h1>
         <p class="byline">
             
@@ -196,41 +190,7 @@ Published on
     </header>
 
     <div class="page-body">
-        <h2 class="no_toc" id="contents">
-    Contents
-</h2>
-
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#installing-ed">Installing Ed</a></li>
-    <li><a href="#getting-started">Getting started</a></li>
-    <li><a href="#hugo">Hugo</a></li>
-    <li><a href="#markdown-and-commonmark">Markdown and CommonMark</a></li>
-    <li><a href="#genres">Genres</a></li>
-    <li><a href="#configuring-author-selection">Configuring Author Selection</a>
-      <ul>
-        <li><a href="#author-display-in-ed">Author Display in Ed</a></li>
-      </ul>
-    </li>
-    <li><a href="#footnotes">Footnotes</a></li>
-    <li><a href="#blockquote">Blockquote</a></li>
-    <li><a href="#pages">Pages</a></li>
-    <li><a href="#tables-of-content">Tables of Content</a></li>
-    <li><a href="#styling-theme">Styling Theme</a></li>
-    <li><a href="#comments">Comments</a>
-      <ul>
-        <li><a href="#comment-configuration-for-content-types">Comment Configuration for Content Types</a></li>
-        <li><a href="#styling-comments">Styling Comments</a></li>
-        <li><a href="#localization">Localization</a></li>
-        <li><a href="#code-snippet-example">Code snippet example</a></li>
-      </ul>
-    </li>
-    <li><a href="#getting-help">Getting help</a></li>
-  </ul>
-</nav>
-
-<hr>
+        <h1 id="flutter">Flutter</h1>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This documentation was built with beginners in mind, but has the necessary information for more seasoned producers.</p>
 <p>To install and use Ed you will be using your terminal. If you need a refresher, I highly recommend &ldquo;<a href="https://www.computervillage.org/articles/CommandLine.pdf" hreflang="en" class="external" target="_blank" rel="noopener noreferrer">The Command Line Crash Course</a>&rdquo;. Working knowledge of HTML and CSS is also taken for granted. If you&rsquo;re new to HTML and CSS, you may want to check out the relevant courses on <a href="https://www.codecademy.com/learn/web" hreflang="en" class="external" target="_blank" rel="noopener noreferrer">codecademy.com</a>.</p>

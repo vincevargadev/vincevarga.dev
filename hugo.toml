@@ -137,6 +137,11 @@ refLinksErrorLevel = 'WARNING'
     pageRef = '/about'
     weight = 2
   [[menus.main]]
+    identifier = 'flutter'
+    name = 'Flutter'
+    pageRef = '/flutter'
+    weight = 2
+  [[menus.main]]
     identifier = 'credits'
     name = 'Credits'
     pageRef = '/credits'
