@@ -1,7 +1,0 @@
-# robots.txt file for "Vince Varga" website, vincevarga.dev
-User-agent: *
-Allow: /
-Disallow: /404.html
-Disallow: /thanks
-
-Sitemap: https://vincevarga.dev/sitemap.xml
