@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/dramas/raisin/</loc>
+    <loc>https://vincevarga.dev/dramas/raisin/</loc>
     <lastmod>2022-02-03T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/dramas/</loc>
+    <loc>https://vincevarga.dev/dramas/</loc>
     <lastmod>2022-02-03T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://vincevarga.dev/</loc>
     <lastmod>2022-05-01T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/poems/mypoem/</loc>
+    <loc>https://vincevarga.dev/poems/mypoem/</loc>
     <lastmod>2022-02-02T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/poems/</loc>
+    <loc>https://vincevarga.dev/poems/</loc>
     <lastmod>2022-05-01T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/poems/dreams/</loc>
+    <loc>https://vincevarga.dev/poems/dreams/</loc>
     <lastmod>2022-05-01T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/poems/delayed/</loc>
+    <loc>https://vincevarga.dev/poems/delayed/</loc>
     <lastmod>2022-01-30T14:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/poems/a-julia/</loc>
+    <loc>https://vincevarga.dev/poems/a-julia/</loc>
     <lastmod>2022-01-01T14:57:10+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/poems/o-captain/</loc>
+    <loc>https://vincevarga.dev/poems/o-captain/</loc>
     <lastmod>2021-02-02T23:56:58+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/narratives/narrative/</loc>
+    <loc>https://vincevarga.dev/narratives/narrative/</loc>
     <lastmod>2016-01-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/narratives/</loc>
+    <loc>https://vincevarga.dev/narratives/</loc>
     <lastmod>2016-01-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://vincevarga.dev/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://vincevarga.dev/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://vincevarga.dev/contact/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/credits/</loc>
+    <loc>https://vincevarga.dev/credits/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/documentation/</loc>
+    <loc>https://vincevarga.dev/documentation/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/flutter/</loc>
+    <loc>https://vincevarga.dev/flutter/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://vincevarga.dev/search/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://vincevarga.dev/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/thanks/</loc>
+    <loc>https://vincevarga.dev/thanks/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
