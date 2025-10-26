@@ -1,1 +1,0 @@
-(()=>{function c(){let n=new IntersectionObserver(function(o){let t=document.querySelector(".top-of-site-link");t!==null&&(t.dataset.visible=o[0].boundingClientRect.y<0)}),e=document.querySelector("#top-of-site-anchor");e!==null&&n.observe(e)}document.addEventListener("DOMContentLoaded",()=>{c()});})();

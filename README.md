@@ -15,6 +15,17 @@ The website is built with [Hugo](https://gohugo.io/). The used theme is a [forke
 3. `hugo mod get`
 4. `hugo serve`
 
+
+Honorable mentions:
+```sh
+hugo --minify --environment production
+miniserve public
+# http://127.0.0.1:8080
+
+hugo serve
+# http://localhost:1313/
+```
+
 ## Release
 
 ### Release with a script

@@ -24,7 +24,7 @@ https://www.linkedin.com/in/vincevargadev
 
 
 /* SITE */
-Last update: 2025/08/03
+Last update: 2025/10/26
 Language: English
 Hugo version: 0.147.9
 
