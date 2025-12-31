@@ -20,11 +20,14 @@ refLinksErrorLevel = 'WARNING'
 [params]
   # Environment setting for production features (robots.txt, etc.)
   env = 'production'
-  
+
   # Site description. Used in meta description
   description = "Hi, I'm Vince Varga. Build Flutter mobile apps by day. Tinker with Rust and crypto by night. All day."
 
   sidebarImage = "/profile.jpeg"
+  mastheadTitleImage = "/profile.jpeg"
+  mastheadTitle = "vincevarga.dev"
+
   sidebarIntro = "Hi, I'm Vince Varga."
   sidebarTagline = "Build Flutter mobile apps by day. Tinker with Rust and crypto by night. All day."
   tagline = "Software Engineer"
@@ -44,7 +47,7 @@ refLinksErrorLevel = 'WARNING'
   # - RSS feeds
   # - search index
   # - ...
-  mainSections = ['posts', 'dramas', 'narratives', 'poems']
+  mainSections = ['posts']
 
   # Posts date format, for example: 2006-01-02
   dateFormat = ':date_long'
@@ -151,16 +154,25 @@ refLinksErrorLevel = 'WARNING'
     name = 'Documentation'
     pageRef = '/documentation'
     weight = 4
+  # Think about adding search back in...
+  # If not, do a proper clean up of search?
+  # [[menus.main]]
+  #   identifier = 'search'
+  #   name = 'Search'
+  #   pageRef = '/search'
+  #   weight = 5
+  # Think about adding contact back in...
+  # If not, do a proper clean up of contact?
+  # [[menus.main]]
+  #   identifier = 'contact'
+  #   name = 'Contact'
+  #   pageRef = '/contact'
+  #   weight = 6
   [[menus.main]]
-    identifier = 'search'
-    name = 'Search'
-    pageRef = '/search'
-    weight = 5
-  [[menus.main]]
-    identifier = 'contact'
-    name = 'Contact'
-    pageRef = '/contact'
-    weight = 6
+    identifier = 'download'
+    name = 'Download Example PDF'
+    url = '/sample.pdf'
+    weight = 7
   [[menus.main]]
     identifier = 'github'
     name = 'GitHub Project'
@@ -173,16 +185,16 @@ refLinksErrorLevel = 'WARNING'
     name = 'RSS 2.0'
     url = '/rss.xml'
     weight = 1
-  [[menus.feeds]]
-    identifier = 'atom'
-    name = 'Atom'
-    url = '/atom.xml'
-    weight = 2
-  [[menus.feeds]]
-    identifier = 'json'
-    name = 'Json Feed'
-    url = '/feed.json'
-    weight = 3
+  # [[menus.feeds]]
+  #   identifier = 'atom'
+  #   name = 'Atom'
+  #   url = '/atom.xml'
+  #   weight = 2
+  # [[menus.feeds]]
+  #   identifier = 'json'
+  #   name = 'Json Feed'
+  #   url = '/feed.json'
+  #   weight = 3
 
 [pagination]
   pagerSize = 10
@@ -283,6 +295,14 @@ refLinksErrorLevel = 'WARNING'
       [markup.goldmark.parser.attribute]
         # Enable custom attribute support for blocks
         block = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+
 
 # If enableGitInfo is true, it will override any lastmod dates in our
 # front matter. We should at least allow ourselves to manually override

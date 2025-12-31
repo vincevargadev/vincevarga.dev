@@ -2,6 +2,7 @@
 title: Documentation
 author: Alex Gil
 featuredImage: screenshot-home.png
+math: true
 ---
 
 {{< toc >}}
@@ -138,67 +139,387 @@ For more information about all available standard front matter variables, please
 
 ---
 
+## Must-resolve issues
+
+* hamburger menu is not positioned perfectly
+* sidebar can't be closed by swipe
+* sidebar can't be dismissed by tapping outside it, e.g. on the main content
+* there is a strange bug with `[id]::before` CSS rule on the RSS feed button, it becomes very big?
+* when sidebar is open, content should fade, maybe with blurring dark overlay?
+* top bar image has unnecessary right padding
+* warning, error, note, alert, etc within the content
+* "universal sign off" at the bottom of the content, e.g. "I'm John Doe, and I am a software developer focusing on embedded C"
+* where are the "articles" page that list all posts?
+* how to properly create new pages? With modified, created data, author, etc?
+* social links with icons, e.g. GitHub, LinkedIn, X, Farcaster?
+* can we create "series"? e.g. multiple posts that talk about the same stuff?
+* webmanifest, favicon, app icons?
+* ask visitor to add website to their homescreen?
+* offline mode?
+* theming?
+* move colors into CSS variables
+* clean up CSS, it's very messy
+
+---
+
+## Mathematics in Vedi
+
+### Display math
+
+You can include mathematical equations and expressions in Markdown using [LaTeX](https://www.latex-project.org/) markup. To set this up, we followed the [Hugo Mathematics Documentation](https://gohugo.io/content-management/mathematics/).
+
+We use [MathJax](https://www.mathjax.org/), a *"JavaScript display engine for mathematics that works in all browsers"*.
+
+To enable MathJax on a page, add `math: true` to the page's frontmatter:
+
+```yaml
+---
+title: My Page with Math
+math: true
+---
+```
+
+This ensures MathJax is only loaded on pages that need it, improving performance for the rest of your site.
+
+Alternatively, if you want MathJax available on every page without adding it to each frontmatter, you can enable it globally in your `hugo.toml`:
+
+```toml
+[params]
+  math = true
+```
+
+Note that MathJax adds ~100+ kB to each page load, so enabling it globally is only recommended if most of your content uses mathematical notation.
+
+
+#### Wrap content within `\[` and `\]`
+
+To add block math equations, wrap your content with `\[` and `\]`, between `$$`:
+
+```latex
+\[
+\begin{aligned}
+KL(\hat{y} || y) &= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\
+JS(\hat{y} || y) &= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))
+\end{aligned}
+\]
+```
+
+which will render to:
+
+\[
+\begin{aligned}
+KL(\hat{y} || y) &= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\
+JS(\hat{y} || y) &= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))
+\end{aligned}
+\]
+
+#### Wrap content within `$$`
+
+Alternatively, you can also place your content within `$$`:
+
+```latex
+$$
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+$$
+
+$$
+C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}
+$$
+```
+
+which will render to:
+
+$$
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+$$
+
+$$
+C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}
+$$
+
+### Inline math
+
+#### Wrap content within `\(` and `\)`
+
+You can create inline math like:
+
+```latex
+The field satisfies \(\nabla \cdot \mathbf{E} = \rho/\varepsilon_0\).
+```
+
+which will render to:
+
+The field satisfies \(\nabla \cdot \mathbf{E} = \rho/\varepsilon_0\).
+
+As another example:
+
+```latex
+Bubble sort has worst-case and average-case time complexity \(O(n^{2})\) and uses \(O(1)\) auxiliary space.
+```
+
+Bubble sort has worst-case and average-case time complexity \(O(n^{2})\) and uses \(O(1)\) auxiliary space.
+
+---
+
+## Syntax highlighting
+
+You can add [syntax highlighting](https://gohugo.io/content-management/syntax-highlighting/) to your code examples.
+
+> **Note**: syntax highlighting colors are not yet customized so they might not look so great and matching the theme. I'll update this later.
+
+Some examples:
+
+### Rust
+
+```rust
+fn is_anagram(a: &str, b: &str) -> bool {
+    if a.chars().count() != b.chars().count() {
+        return false;
+    }
+
+    let mut freq = HashMap::new();
+
+    for ch in a.chars() {
+        *freq.entry(ch).or_insert(0) += 1;
+    }
+    for ch in b.chars() {
+        match freq.get_mut(&ch) {
+            Some(v) => {
+                *v -= 1;
+                if *v == 0 {
+                    freq.remove(&ch);
+                }
+            }
+            None => return false,
+        }
+    }
+
+    freq.is_empty()
+}
+```
+
+### Dart
+
+```dart
+void bubbleSort(List<int> list) {
+  final n = list.length;
+  for (var i = 0; i < n - 1; i++) {
+    for (var j = 0; j < n - i - 1; j++) {
+      if (list[j] > list[j + 1]) {
+        final temp = list[j];
+        list[j] = list[j + 1];
+        list[j + 1] = temp;
+      }
+    }
+  }
+}
+```
+
+### C
+
+```c
+#include <stdbool.h>
+
+bool is_right_triangle(int a, int b, int c) {
+    // Sort the sides so c is the largest
+    int x = a, y = b, z = c;
+    if (x > y) { int t = x; x = y; y = t; }
+    if (y > z) { int t = y; y = z; z = t; }
+    if (x > y) { int t = x; x = y; y = t; }
+
+    // Check Pythagorean condition
+    return x*x + y*y == z*z;
+}
+```
+
+---
+
+## Diagrams
+
+### Mermaid
+
+The theme has [Mermaid support](https://gohugo.io/content-management/diagrams/#mermaid-diagrams).
+
+[Mermaid](https://mermaid.js.org/) is a *JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically.*
+
+Here is a Mermaid sequence diagram:
+
+```
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
+Now, you the `mermaid` to the code snippet:
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
+### Goat ASCII diagrams
+
+[GoAT diagrams](https://gohugo.io/content-management/diagrams/#goat-diagrams-ascii) are supported by Hugo. The examples below are listed on [github.com/bep/goat](https://github.com/bep/goat). Just add `goat` to your code block and Hugo will automatically convert your text to a GoAT diagram.
+
+##### Trees
+
+```goat
+          .               .                .               .--- 1          .-- 1     / 1
+         / \              |                |           .---+            .-+         +
+        /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
+       +     +        |       |        |       |    ---+            ---+          +
+      / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
+     /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
+     1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
+```
+
+##### Overlaps
+
+```goat
+           .-.           .-.           .-.           .-.           .-.           .-.
+          |   |         |   |         |   |         |   |         |   |         |   |
+       .---------.   .--+---+--.   .--+---+--.   .--|   |--.   .--+   +--.   .------|--.
+      |           | |           | |   |   |   | |   |   |   | |           | |   |   |   |
+       '---------'   '--+---+--'   '--+---+--'   '--|   |--'   '--+   +--'   '--|------'
+          |   |         |   |         |   |         |   |         |   |         |   |
+           '-'           '-'           '-'           '-'           '-'           '-'
+```
+
+##### Line Decorations
+
+
+```goat
+                ________                            o        *          *   .--------------.
+   *---+--.    |        |     o   o      |         ^          \        /   |  .----------.  |
+       |   |    '--*   -+-    |   |      v        /            \      /    | |  <------.  | |
+       |    '----->       .---(---'  --->*<---   /      .+->*<--o----'     | |          | | |
+   <--'  ^  ^             |   |                 |      | |  ^    \         |  '--------'  | |
+          \/        *-----'   o     |<----->|   '-----'  |__|     v         '------------'  |
+          /\                                                               *---------------'
+```
+
+##### Line Ends
+
+
+```goat
+   o--o    *--o     /  /   *  o  o o o o   * * * *   o o o o   * * * *      o o o o   * * * *
+   o--*    *--*    v  v   ^  ^   | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
+   o-->    *-->   *  o   /  /    o * v '   o * v '     o * v \   o * v \  o * v /   o * v /
+   o---    *---
+                                 ^ ^ ^ ^   . . . .   ^ ^ ^ ^   \ \ \ \      ^ ^ ^ ^   / / / /
+   |  |   *  o  \  \   *  o      | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /
+   v  v   ^  ^   v  v   ^  ^     o * v '   o * v '     o * v \   o * v \  o * v /   o * v /
+   *  o   |  |    *  o   \  \
+
+   <--o   <--*   <-->   <---      ---o   ---*   --->   ----      *<--   o<--   -->o   -->*
+```
+
+##### Dot Grids
+
+
+``` goat
+  o o o o o  * * * * *  * * o o *    o o o      * * *      o o o     · * · · ·     · · ·
+  o o o o o  * * * * *  o o o o *   o o o o    * * * *    * o * *    · * * · ·    · · · ·
+  o o o o o  * * * * *  o * o o o  o o o o o  * * * * *  o o o o o   · o · · o   · · * * ·
+  o o o o o  * * * * *  o * o o o   o o o o    * * * *    o * o o    · · · · o    · · * ·
+  o o o o o  * * * * *  * * * * o    o o o      * * *      o * o     · · · · ·     · · *
+```
+
+##### Large Nodes
+
+
+```goat
+   .---.       .-.        .-.       .-.                                       .-.
+   | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.                  | 8 |
+   '---'       '-'        '+'       '-'                    |                  '-'
+                           |         ^                     |                   ^
+                           v         |                     v                   |
+                          .-.      .-+-.        .-.      .-+-.      .-.       .+.       .---.
+                         | 3 +---->| B |<----->| 5 +---->| C +---->| 6 +---->| 7 |<---->| D |
+                          '-'      '---'        '-'      '---'      '-'       '-'       '---'
+```
+
+##### Small Grids
+
+```goat
+       ___     ___      .---+---+---+---+---.     .---+---+---+---.  .---.   .---.
+   ___/   \___/   \     |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |
+  /   \___/   \___/     +---+---+---+---+---+   +---+---+---+---+    +---+   +---+
+  \___/ b \___/   \     |   |   | b |   |   |    \ / \a/ \b/ \ / \   |   +---+   |
+  / a \___/   \___/     +---+---+---+---+---+     +---+---+---+---+  +---+ b +---+
+  \___/   \___/   \     |   | a |   |   |   |    / \ / \ / \ / \ /   | a +---+   |
+      \___/   \___/     '---+---+---+---+---'   '---+---+---+---'    '---'   '---'
+```
+
+##### Big Grids
+
+```goat
+    .----.        .----.
+   /      \      /      \            .-----+-----+-----.
+  +        +----+        +----.      |     |     |     |          .-----+-----+-----+-----+
+   \      /      \      /      \     |     |     |     |         /     /     /     /     /
+    +----+   B    +----+        +    +-----+-----+-----+        +-----+-----+-----+-----+
+   /      \      /      \      /     |     |     |     |       /     /     /     /     /
+  +   A    +----+        +----+      |     |  B  |     |      +-----+-----+-----+-----+
+   \      /      \      /      \     +-----+-----+-----+     /     /  A  /  B  /     /
+    '----+        +----+        +    |     |     |     |    +-----+-----+-----+-----+
+          \      /      \      /     |  A  |     |     |   /     /     /     /     /
+           '----'        '----'      '-----+-----+-----'  '-----+-----+-----+-----+
+```
+
+##### Complicated
+
+```goat
++-------------------+                           ^                      .---.
+|    A Box          |__.--.__    __.-->         |      .-.             |   |
+|                   |        '--'               v     | * |<---        |   |
++-------------------+                                  '-'             |   |
+                       Round                                       *---(-. |
+  .-----------------.  .-------.    .----------.         .-------.     | | |
+ |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |
+ | & Square Corners |  '--. .--'  /              \       |---+---|     '-)-'       .--------.
+ '--+------------+-'  .--. |     '-------+--------'      |   |   |       |        / Search /
+    |            |   |    | '---.        |               '-------'       |       '-+------'
+    |<---------->|   |    |      |       v                Interior                 |     ^
+    '           <---'      '----'   .-----------.              ---.     .---       v     |
+ .------------------.  Diag line    | .-------. +---.              \   /           .     |
+ |   if (a > b)     +---.      .--->| |       | |    | Curved line  \ /           / \    |
+ |   obj->fcn()     |    \    /     | '-------' |<--'                +           /   \   |
+ '------------------'     '--'      '--+--------'      .--. .--.     |  .-.     +Done?+-'
+    .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /
+    |   |     | Join        \|/        |   | Curved    | \| |/ | |    \    |      \ /
+    |   |     +---->  o    --o--        '-'  Vertical  '--' '--'  '--  '--'        +  .---.
+ <--+---+-----'       |     /|\                                                    |  | 3 |
+                      v                             not:line    'quotes'        .-'   '---'
+  .-.             .---+--------.            /            A || B   *bold*       |        ^
+ |   |           |   Not a dot  |      <---+---<--    A dash--is not a line    v        |
+  '-'             '---------+--'          /           Nor/is this.            ---
+```
+
+---
+
 ## Markdown and CommonMark
 
 Ed is designed for scholars and amateur editors who want to produce either a clean reading edition or a scholarly annotated edition of a text. The main language we use to write in the Hugo environment is called Markdown. To learn more about the Markdown family, see Dennis Tenen and Grant Wythoff's "{{< link src="http://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown" class="external" target="_blank" hreflang="en" rel="noopener noreferrer" >}}Sustainable Authorship in Plain Text using Pandoc and Markdown{{< /link >}}".
 
 By default, Hugo uses a special Markdown processor called Goldmark. The processor can be said to use it's own 'flavor' of Markdown called CommonMark, and sometimes the Markdown syntax will be different than other flavors of Markdown. CommonMark is a rationalized version of Markdown syntax with a spec whose goal is to remove the ambiguities and inconsistency surrounding the original Markdown specification. It offers a standardized specification that defines the common syntax of the language along with a suite of comprehensive tests to validate Markdown implementations against this specification. You can become familiar with the CommonMark syntax in the {{< link src="https://spec.commonmark.org/" class="external" target="_blank" hreflang="en" rel="noopener noreferrer" >}}CommonMark documentation{{< /link >}}. Another way to become familiar is to examine the sample text source files we provided.
-
----
-
-## Genres
-
-Ed offers four different layouts: poem, narrative, drama and simple post. To create content of a certain genre, create a file in the appropriate folder. For example, if you want to create a poem, create a file in the `content/poems` folder. Another way is to indicated genre in the front matter on your texts. The templates that govern how these genres are displayed can be found in the Ed's `layouts` folder. Redefining these layouts in project wide level will allow you to tweak the stylesheets according to your different needs. Out of the box, Ed contains some special instructions for poetry in its stylesheets that allow you to deal with some of the peculiarities of poetry layouts.
-
-To indicate lines in poetry we use the line syntax from Markdown:
-
-```markdown
-- Hold fast to dreams
-- For if dreams die
-- Life is a broken-winged bird
-- That cannot fly.
-- Hold fast to dreams
-- For when dreams go
-- Life is a barren field
-- Frozen with snow.
-```
-
-The `-` at the beginning of each line indicates that these are lines. Another way to achieve the same effect is to use the following syntax:
-
-```markdown
-Hold fast to dreams\
-For if dreams die\
-Life is a broken-winged bird\
-That cannot fly.\
-Hold fast to dreams\
-For when dreams go\
-Life is a barren field\
-Frozen with snow.
-```
-
-To indent specific lines we take advantage of Hugo shortcuts that allows us to create empty indentation for a line. This approach still allows the line to be readable while editing.
-
-```markdown
-- {{</* indent 3 */>}} But O heart! heart! heart!
-- {{</* indent 4 */>}} O the bleeding drops of red,
-- {{</* indent 5 */>}} Where on the deck my Captain lies,
-- {{</* indent 6 */>}} Fallen cold and dead.
-```
-
-or:
-
-```markdown
-{{</* indent 3 */>}} But O heart! heart! heart!\
-{{</* indent 4 */>}} O the bleeding drops of red,\
-{{</* indent 5 */>}} Where on the deck my Captain lies,\
-{{</* indent 6 */>}} Fallen cold and dead.
-```
-
-The `{{</* indent 3 */>}}` is what we need to in order to indicate the indent value for that line. Values can range from 1-10. You can expand the range or adjust the values in the custom stylesheet file. Ed is customized by creating stylesheet files in `assets/css/extended/*.css` at project wide level.
-
-The example from Raisin in the Sun shows us that we don't need much special markup for theater as long as we use CAPITAL LETTERS for speakers. Italics for directions are easy enough. Just use `*` around the words you want to italicize.
-
-*Narrative of the Life of Frederick Douglass* shows us an example of narrative that includes footnotes and quoted poetry. See the sections below for how to accomplish these different effects.
 
 ---
 
@@ -362,36 +683,16 @@ At the moment (May 2022) time the footnotes system provided by Hugo does have on
 
 ## Blockquote
 
-*Narrative of the Life* also includes several blockquote elements. You can also find another example of blockquote use in the footnote of "O Captain! My Captain!" Simple blockquote are simple enough in Markdown:
+Blockquotes are simple in Markdown:
 
 ```
-> This is to certify that I, the undersigned, have given the bearer, my servant, full liberty to go to Baltimore, and spend the Easter holidays.
+> This is an example blockquote.
 >
-> Written with mine own hand, &c., 1835.
-> WILLIAM HAMILTON,
+> It can span multiple paragraphs.
+> Just keep using the > prefix.
 ```
 
-To use a line break in block elements add two spaces after the end of the line where you want the break. You can't see them after `&c., 1835.` but they are there.
-
-Things get a bit complicated when we want to use poetry inside the block or when the block is included in another block element, like a footnote. Here's the last two stanzas from "A Parody" in *Narrative of the Life*, which shows an example of a blockquote of poetry:
-
-```
-...
-> - Two others oped their iron jaws,
-> - And waved their children-stealing paws;
-> - There sat their children in gewgaws;
-> - By stinting negroes' backs and maws,
-> - They kept up heavenly union.
-{.poetry}
-> - All good from Jack another takes,
-> - And entertains their flirts and rakes,
-> - Who dress as sleek as glossy snakes,
-> - And cram their mouths with sweetened cakes;
-> - And this goes down for union.
-{.poetry}
-```
-
-The `{.poetry}` tag at the end tells the processor to think of the lines above it as poetry. The `{.poetry}` tag is an example of Goldmark class assignments for block-elements. Because this segment of poetry exists in the 'narrative' layout, and because it is part of a blockquote, we need to signal to the processor to process poetry this way, so that the right class is invoked in the stylesheet. The good news is this is the most complex Goldmark syntax layout you will encounter in Ed.
+To use a line break in block elements add two spaces after the end of the line where you want the break.
 
 
 ## Pages
@@ -517,7 +818,7 @@ You can obtain the `repoId` and `categoryId` by configuring your repository on t
 
 ### Comment Configuration for Content Types
 
-In the Ed theme, comments are disabled by default for all content types to maintain simplicity and focus for users. This includes all posts (poems, narratives, dramas, and blog posts) and pages. This setting helps ensure that comments are only enabled where they are explicitly needed, allowing for more granular control over site interactions.
+In the Ed theme, comments are disabled by default for all content types to maintain simplicity and focus for users. This includes all posts and pages. This setting helps ensure that comments are only enabled where they are explicitly needed, allowing for more granular control over site interactions.
 
 ```toml
 # Default site configuration to disable comments globally

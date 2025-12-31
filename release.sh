@@ -150,3 +150,5 @@ echo ""
 echo "To open the live website in your browser, run:"
 echo "🔗 open https://vincevarga.dev"
 echo ""
+
+say "Release completed successfully!"
