@@ -182,7 +182,7 @@ refLinksErrorLevel = 'WARNING'
 
   [[menus.feeds]]
     identifier = 'rss'
-    name = 'RSS 2.0'
+    name = 'RSS'
     url = '/rss.xml'
     weight = 1
   # [[menus.feeds]]
